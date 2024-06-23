@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Vibur&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Vibur", cursive;
+}
+
+body {
+  overflow: hidden;
+}
+
+.gender {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  position: absolute;
+  width: 270px;
+  height: 370px;
+  fill: none;
+  stroke-width: 5px;
+}
+
+#boy {
+  stroke: #0099ff;
+  left: -78.47px;
+  top: -233px;
+  z-index: 1;
+  filter: drop-shadow(0px 0px 30px #0099ff);
+}
+
+#girl {
+  stroke: #ff00bb;
+  left: -180px;
+  top: -131px;
+  z-index: 0;
+  filter: drop-shadow(0px 0px 30px #ff00bb);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    5deg,
+    rgb(247, 101, 255) 0%,
+    rgb(117, 216, 255, 0.9) 100%
+  );
+}
+
+span {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.box {
+  position: relative;
+  z-index: 9;
+}
+
+.box .result {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  bottom: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  z-index: 10;
+  animation: animate 4s ease-in-out infinite;
+}
+
+.result1 {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-15px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+.box .result p {
+  position: relative;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 40px;
+  color: #fff;
+}
+
+#copy {
+  position: absolute;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  bottom: -130px;
+  right: 210px;
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  margin: 50px;
+  position: relative;
+  width: 300px;
+  height: 380px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  animation: animate 6s ease-in-out infinite;
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+}
+
+.form h2 {
+  position: relative;
+  color: #666;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.form h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 50px;
+  height: 4px;
+  background: #666;
+}
+
+.form .inputbox {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form .inputbox input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #666;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form .inputbox input::placeholder {
+  color: #666;
+}
+
+.form .inputbox input[type="submit"] {
+  /* background: #fff; */
+  color: #666;
+  max-width: 100px;
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.card {
+  position: relative;
+  width: 33.33%;
+}
+
+button {
+  position: absolute;
+  align-items: center;
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 13px;
+  height: 20px;
+  width: 35px;
+  background-color: #c76dff;
+  color: white;
+  bottom: 0px;
+  right: 0px;
+}
+
+button:hover {
+  background-color: #5db0ff;
+}
+
+.container1 {
+  position: relative;
+  width: 250px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+}
+
+.form2 {
+  position: relative;
+  /* justify-content: center; */
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+}
+
+.weight {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #0099ff;
+  font-size: 30px;
+}
+
+.range {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #ff00bb;
+  /* font-size: larger; */
+}
+
+.form1 h2 {
+  position: relative;
+  color: #666;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.form1 h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 30px;
+  height: 4px;
+  background: #666;
+}
+
+.form1 .inputbox1 {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form1 .inputbox1 input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #666;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form1 .inputbox1 input::placeholder {
+  color: #666;
+}
+
+.form1 .inputbox1 input[type="submit"] {
+  /* background: #fff; */
+  color: #666;
+  max-width: 100px;
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.gender #boy path {
+  fill: transparent;
+  stroke-width: 4;
+  stroke-dasharray: 800 200;
+  animation: oj 5s linear infinite;
+}
+
+.gender #girl path {
+  fill: transparent;
+  stroke-width: 4;
+  stroke-dasharray: 800 200;
+  stroke-linecap: round;
+  animation: oj 5s linear infinite;
+}
+
+@keyframes oj {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dashoffset: 500;
+  }
+
+  100% {
+    stroke-dashoffset: 1000;
+  }
+}
